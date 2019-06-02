@@ -18,12 +18,12 @@
                             <div class="modal-body">
                                 <div class="container-fluid">
                                     <div class="row mt-3 mb-3">
-                                        <div class="col-3">
-                                            <img src="../assets/test-projet.jpg" alt="test">
+                                        <div class="col-xl-4 col-lg-5 col-md-6">
+                                            <img :src="imgName" class="rounded mx-auto d-block" alt="test">
                                         </div>
-                                        <div class="col-9">
-                                            <h3 class="mb-4 ml-4">Nom du projet</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet atque corporis debitis est eum ex fuga impedit quibusdam, rem ullam ut veniam veritatis. Incidunt magnam perferendis quasi quidem sunt.</p>
+                                        <div class="col-xl-8 col-lg-7 col-md-6">
+                                            <h3 class="mb-4 ml-4">{{ title }}</h3>
+                                            <p class="rounded mx-auto d-block">{{ description }} Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium animi corporis ducimus ea eveniet fuga illo maiores maxime necessitatibus nobis, nulla numquam omnis pariatur perspiciatis placeat provident reiciendis repellat sequi!</p>
                                         </div>
                                     </div>
                                 </div>
@@ -44,12 +44,14 @@
     export default {
         name: 'Nav',
         props: {
-            msg: String
+            imgName: String,
+            title: String,
+            description: String,
         }
     }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+
 <style lang="scss" scoped>
     .project{
         padding: 15px;
@@ -62,16 +64,17 @@
             height: 100%;
             transition: .5s ease-out;
             &:hover{
+                cursor: pointer   ;
                 -webkit-filter: brightness(60%); /* Safari 6.0 - 9.0 */
                 filter: brightness(60%);
-                transform: scale(1.3);
+                transform: scale(1.1);
             }
         }
         .modal {
             .modal-dialog{
                 margin: 0;
-                margin-left: 10%;
-                max-width: 80%;
+                margin-left: 15%;
+                max-width: 70%;
                 .modal-content {
                     margin-top: 250px;
                     background-color: #363636;
@@ -80,9 +83,7 @@
                         color: #FFF;
                         font-weight: 300;
                         img {
-                            margin-left: 30px;
-                            height: 150px;
-                            width: 150px;
+                            width: 80%;
                         }
                     }
                 }

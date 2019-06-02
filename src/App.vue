@@ -7,14 +7,14 @@
     <div class="container-fluid mt-5">
       <div class="row">
         <div class="col-xg-2 col-lg-2"></div>
-        <Project></Project>
+        <Project imgName="/img/test-projet.9322f3da.jpg" title="le titre" description="la description"></Project>
         <Project></Project>
         <Project></Project>
         <Project></Project>
       </div>
       <div class="row">
         <div class="col-xl-2 col-lg-2"></div>
-        <Project></Project>
+        <Project imgName="test-projet.jpg" title="le titre" description="la description"></Project>
         <Project></Project>
         <Project></Project>
         <Project></Project>
